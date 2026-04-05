@@ -44,13 +44,13 @@ const HomePage = ({ setActiveTab }) => {
           <div className="flex justify-center space-x-6">
             <button
               onClick={() => setActiveTab('team')}
-              className="bg-cyan-500 text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-cyan-400 transition-all shadow-xl shadow-cyan-900/40"
+              className="bg-white text-blue-600 border border-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-cyan-400 transition-all shadow-xl shadow-cyan-900/40"
             >
               探索研究團隊
             </button>
             <button
               onClick={() => setActiveTab('publications')}
-              className="bg-transparent border border-slate-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all"
+              className="bg-white text-blue-600 border border-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all"
             >
               相關學術研究
             </button>
