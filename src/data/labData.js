@@ -326,23 +326,23 @@ export const PUBLICATIONS = {
 
 export const SLIDES = [
   {
-    url: "https://imagizer.imageshack.com/img924/4258/vrgEHp.jpg",
-    title: "教師節聚餐",
+    url: "url(/IDDT_lab/2025.10.01.jpg)",
+    title: "2025/10/01 教師節聚餐",
   },
   {
-    url: "https://imagizer.imageshack.com/img923/3267/jfdjo8.jpg",
-    title: "實驗室聚餐",
+    url: "url(/IDDT_lab/2025.11.18.jpg)",
+    title: "2025/11/18 實驗室聚餐",
   },
   {
-    url: "https://imagizer.imageshack.com/img922/6081/HupKnA.jpg",
-    title: "年末尾牙",
+    url: "url(/IDDT_lab/2025.12.26.jpg)",
+    title: "2025/12/26 年末尾牙",
   },
   {
-    url: "https://imagizer.imageshack.com/img924/4489/YGBl7X.jpg",
-    title: "Camping 局",
+    url: "url(/IDDT_lab/2026.02.04.jpg)",
+    title: "2026/02/04 Lab遊",
   },
   {
-    url: "https://imagizer.imageshack.com/img923/9290/xK1Ici.jpg",
-    title: "老師生日快樂",
+    url: "url(/IDDT_lab/2026.03.10.jpg)",
+    title: "2026/03/10 老師生日快樂！",
   },
 ];

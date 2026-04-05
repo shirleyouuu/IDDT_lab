@@ -34,7 +34,7 @@ const HomePage = ({ setActiveTab }) => {
       >
         <div className="absolute inset-0 bg-black/50 pointer-events-none" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-block px-4 py-1 border border-blue-500/30 bg-blue-500/10 rounded-full text-blue-400 text-lg font-semibold mb-8">
+          <div className="bg-white inline-block px-4 py-1 border border-blue-500/30 bg-blue-500/10 rounded-full text-blue-400 text-lg font-semibold mb-8">
             工業工程與工程管理學系｜國立清華大學
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
@@ -44,13 +44,13 @@ const HomePage = ({ setActiveTab }) => {
           <div className="flex justify-center space-x-6">
             <button
               onClick={() => setActiveTab('team')}
-              className="bg-white text-blue-600 border border-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-400 transition-all shadow-xl shadow-blue-900/40"
+              className="bg-white text-blue-600 border border-blue-600 px-8 py-4 rounded-xl font-bold hover:-translate-y-1 hover:shadow-2xl transition-all shadow-xl shadow-blue-900/40"
             >
               探索研究團隊
             </button>
             <button
               onClick={() => setActiveTab('publications')}
-              className="bg-white text-blue-600 border border-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-400 transition-all shadow-xl shadow-blue-900/40"
+              className="bg-white text-blue-600 border border-blue-600 px-8 py-4 rounded-xl font-bold hover:-translate-y-1 hover:shadow-2xl transition-all shadow-xl shadow-blue-900/40"
             >
               相關學術研究
             </button>
@@ -112,7 +112,7 @@ const HomePage = ({ setActiveTab }) => {
                 className="bg-white/90 hover:bg-white p-2 rounded-full shadow-md transition"
                 aria-label="Next slide"
               >
-                <ChevronRight size={20} className="text-slate-700" />
+                <ChevronRight size={16} className="text-slate-700" />
               </button>
             </div>
           </div>
