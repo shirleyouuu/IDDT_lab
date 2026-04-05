@@ -34,13 +34,13 @@ const HomePage = ({ setActiveTab }) => {
       >
         <div className="absolute inset-0 bg-black/50 pointer-events-none" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-block px-4 py-1 border border-cyan-500/30 bg-blue-500/10 rounded-full text-blue-400 text-lg font-medium mb-8">
+          <div className="inline-block px-4 py-1 border border-blue-500/30 bg-blue-500/10 rounded-full text-blue-400 text-lg font-semibold mb-8">
             工業工程與工程管理學系｜國立清華大學
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
             智慧決策與數位雙生
           </h1>
-          <p className="text-4xl text-cyan-300 font-semibold mb-8">Intelligence Decision & Digital Twin Lab</p>
+          <p className="text-3xl text-cyan-300 font-semibold mb-8">Intelligence Decision & Digital Twin Lab</p>
           <div className="flex justify-center space-x-6">
             <button
               onClick={() => setActiveTab('team')}
