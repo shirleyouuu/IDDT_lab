@@ -9,9 +9,16 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone --no-local https://github.com/shirleyouuu/IDDT_lab.git .
+          git clone https://github.com/shirleyouuu/IDDT_lab.git .
           git checkout main
+
       - name: Install and Build
         run: |
           npm install
           npm run build
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
