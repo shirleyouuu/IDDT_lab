@@ -34,23 +34,23 @@ const HomePage = ({ setActiveTab }) => {
       >
         <div className="absolute inset-0 bg-black/50 pointer-events-none" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-block px-4 py-1 border border-cyan-500/30 bg-cyan-500/10 rounded-full text-cyan-400 text-sm font-medium mb-8">
+          <div className="inline-block px-4 py-1 border border-cyan-500/30 bg-blue-500/10 rounded-full text-blue-400 text-lg font-medium mb-8">
             工業工程與工程管理學系｜國立清華大學
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
             智慧決策與數位雙生
           </h1>
-          <p className="text-xl text-cyan-300 font-semibold mb-8">Intelligence Decision & Digital Twin Lab</p>
+          <p className="text-4xl text-cyan-300 font-semibold mb-8">Intelligence Decision & Digital Twin Lab</p>
           <div className="flex justify-center space-x-6">
             <button
               onClick={() => setActiveTab('team')}
-              className="bg-white text-blue-600 border border-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-cyan-400 transition-all shadow-xl shadow-cyan-900/40"
+              className="bg-white text-blue-600 border border-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-400 transition-all shadow-xl shadow-blue-900/40"
             >
               探索研究團隊
             </button>
             <button
               onClick={() => setActiveTab('publications')}
-              className="bg-white text-blue-600 border border-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all"
+              className="bg-white text-blue-600 border border-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-400 transition-all shadow-xl shadow-blue-900/40"
             >
               相關學術研究
             </button>
