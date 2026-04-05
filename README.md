@@ -81,6 +81,12 @@ vercel
 ```bash
 npm run build
 # 將 dist/ 內容部署至 gh-pages 分支
+
+cd "C:\Users\YunXuan Ou\Desktop\lab-website"
+>> git add -A
+>> git commit -m "修改內容撰寫"
+>> git push
+
 ```
 
 ---
