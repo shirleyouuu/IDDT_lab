@@ -31,8 +31,7 @@ const HomePage = ({ setActiveTab }) => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
-      ></div>
-      <div className="relative py-28 px-6 overflow-hidden bg-slate-900 text-white">
+      >
         <div className="absolute inset-0 bg-black/50 pointer-events-none" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-block px-4 py-1 border border-cyan-500/30 bg-cyan-500/10 rounded-full text-cyan-400 text-sm font-medium mb-8">
