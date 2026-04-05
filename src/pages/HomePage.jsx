@@ -4,6 +4,13 @@ import { SLIDES } from '../data/labData';
 
 const HomePage = ({ setActiveTab }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -12,17 +19,21 @@ const HomePage = ({ setActiveTab }) => {
     return () => clearInterval(timer);
   }, []);
 
-  const visibleSlides = 3;
+  const visibleSlides = isMobile ? 1 : 3;
   const slideDisplay = Array.from({ length: visibleSlides }, (_, idx) => SLIDES[(currentSlide + idx) % SLIDES.length]);
 
   return (
     <section className="animate-in fade-in slide-in-from-bottom-4 duration-700">
       {/* Hero */}
+      <div className="relative py-28 px-6 overflow-hidden text-white"
+        style={{
+          backgroundImage: 'url(/IDDT_lab/homepage.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
       <div className="relative py-28 px-6 overflow-hidden bg-slate-900 text-white">
-        <div
-          className="absolute inset-0 opacity-20 pointer-events-none"
-          style={{ backgroundImage: `radial-gradient(#22d3ee 1px, transparent 1px)`, backgroundSize: '30px 30px' }}
-        />
+        <div className="absolute inset-0 bg-black/50 pointer-events-none" />
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-block px-4 py-1 border border-cyan-500/30 bg-cyan-500/10 rounded-full text-cyan-400 text-sm font-medium mb-8">
             工業工程與工程管理學系｜國立清華大學
@@ -77,7 +88,7 @@ const HomePage = ({ setActiveTab }) => {
             <h2 className="text-4xl font-bold text-slate-900 mb-4">研究室日常</h2>
           </div>
           <div className="relative w-full rounded-[40px] overflow-hidden shadow-2xl">
-            <div className="grid grid-cols-3 gap-4 px-4 py-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 py-4">
               {slideDisplay.map((slide, idx) => (
                 <div key={idx} className="relative rounded-[20px] overflow-hidden aspect-[4/3] border border-slate-200 shadow-sm">
                   <img src={slide.url} alt={slide.title} className="w-full h-full object-cover" />

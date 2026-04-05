@@ -9,18 +9,22 @@ import PublicationsPage from './pages/PublicationsPage';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('home');
+  const handleSetActiveTab = (tab) => {
+    setActiveTab(tab);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen bg-[#f8fafc] font-sans text-slate-900">
-      <NavBar activeTab={activeTab} setActiveTab={setActiveTab} />
+      <NavBar activeTab={activeTab} setActiveTab={handleSetActiveTab} />
 
       <main className="pt-20">
-        {activeTab === 'home'         && <HomePage         setActiveTab={setActiveTab} />}
+        {activeTab === 'home'         && <HomePage         setActiveTab={handleSetActiveTab} />}
         {activeTab === 'team'         && <TeamPage />}
         {activeTab === 'publications' && <PublicationsPage />}
       </main>
 
-      <Footer setActiveTab={setActiveTab} />
+      <Footer setActiveTab={handleSetActiveTab} />
     </div>
   );
 };
