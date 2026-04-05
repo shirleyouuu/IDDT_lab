@@ -326,23 +326,23 @@ export const PUBLICATIONS = {
 
 export const SLIDES = [
   {
-    url: "url(/IDDT_lab/2025.10.01.jpg)",
+    url: "/IDDT_lab/2025.10.01.jpg",
     title: "2025/10/01 教師節聚餐",
   },
   {
-    url: "url(/IDDT_lab/2025.11.18.jpg)",
+    url: "/IDDT_lab/2025.11.18.jpg",
     title: "2025/11/18 實驗室聚餐",
   },
   {
-    url: "url(/IDDT_lab/2025.12.26.jpg)",
+    url: "/IDDT_lab/2025.12.26.jpg",
     title: "2025/12/26 年末尾牙",
   },
   {
-    url: "url(/IDDT_lab/2026.02.04.jpg)",
+    url: "/IDDT_lab/2026.02.04.jpg",
     title: "2026/02/04 Lab遊",
   },
   {
-    url: "url(/IDDT_lab/2026.03.10.jpg)",
+    url: "/IDDT_lab/2026.03.10.jpg",
     title: "2026/03/10 老師生日快樂！",
   },
 ];
