@@ -34,42 +34,56 @@ export const TEAM = {
   masters: [
     {
       name: "劉璨瑤",
-      interest: "劉老師",
+      interest: "Scheduling",
+      year: "碩二",
       image: "https://imagizer.imageshack.com/img923/3381/h3nW0z.jpg",
     },
     {
       name: "江俊佑",
-      interest: "鳳中天才",
+      interest: "Deep Learning",
+      year: "碩二",
       image: "https://imagizer.imageshack.com/img922/6890/haM0to.jpg",
     },
     {
       name: "林柏均",
-      interest: "鹿哥",
+      interest: "Deep Learning",
+      year: "碩二",
       image: "https://imagizer.imageshack.com/img922/9564/QWbw9L.jpg",
     },
     {
       name: "歐芸亘",
       interest: "Supply chain",
+      year: "碩二",
       image: "https://imagizer.imageshack.com/img923/6848/MOaoti.jpg",
     },
     {
       name: "李孟儒",
-      interest: "Scheduling 大師",
+      interest: "Scheduling",
+      year: "碩一",
       image: "https://imagizer.imageshack.com/img922/3558/LrX2SG.jpg",
     },
     {
       name: "李奕安",
       interest: "Supply chain",
+      year: "碩一",
       image: "https://imagizer.imageshack.com/img922/4539/q4Y2sE.jpg",
     },
     {
       name: "吳萱儀",
       interest: "Supply chain",
+      year: "碩二",
       image: "https://imagizer.imageshack.com/img922/3061/jDduqV.jpg",
     },
     {
       name: "蕭禮英",
-      interest: "災防專家",
+      interest: "災防",
+      year: "碩二",
+      image: "https://imagizer.imageshack.com/img924/9615/acI6Dd.jpg",
+    },
+    {
+      name: "王曉明",
+      interest: "Deep Learning",
+      year: "碩一",
       image: "https://imagizer.imageshack.com/img924/9615/acI6Dd.jpg",
     },
   ],
@@ -93,6 +107,48 @@ export const TEAM = {
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop",
     },
   ],
+  graduates: {
+    masters: [
+      {
+        name: "黃怡璇",
+        interest: "智慧製造與物流優化",
+        year: "碩士",
+        image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=200&h=200&auto=format&fit=crop",
+      },
+      {
+        name: "陳冠宇",
+        interest: "數位雙生模擬分析",
+        year: "碩士",
+        image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&h=200&auto=format&fit=crop",
+      },
+      {
+        name: "林子軒",
+        interest: "供應鏈決策支援系統",
+        year: "碩士",
+        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop",
+      },
+    ],
+    professional: [
+      {
+        name: "林佳蓉",
+        interest: "智慧製造系統整合",
+        company: "鴻海",
+        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&auto=format&fit=crop",
+      },
+      {
+        name: "吳宗憲",
+        interest: "工業物聯網與數據分析",
+        company: "台達電子",
+        image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=200&h=200&auto=format&fit=crop",
+      },
+      {
+        name: "蔡昀甫",
+        interest: "智慧物流與自動化",
+        company: "大立光",
+        image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&h=200&auto=format&fit=crop",
+      },
+    ],
+  },
 };
 
 export const PUBLICATIONS = {
