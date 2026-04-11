@@ -1,6 +1,4 @@
-// ============================================================
-//  labData.js — 修改這裡的資料，不需要動任何 UI 程式碼
-// ============================================================
+
 
 export const LAB_NAME = "智慧決策與數位雙生";
 export const LAB_NAME_EN = "Intelligent Decision & Digital Twin";
