@@ -1,15 +1,25 @@
-import React, { useRef, useEffect } from 'react';
-import { BookOpen, Briefcase, Microscope, MapPin } from 'lucide-react';
+import React, { useRef, useEffect, useState } from 'react';
+import { BookOpen, Briefcase, Microscope, MapPin, ArrowUp } from 'lucide-react';
 import { PUBLICATIONS } from '../data/labData';
 
 const PublicationsPage = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 400);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const nstcRef = useRef(null);
   const industryRef = useRef(null);
   const journalsRef = useRef(null);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const handleScroll = (ref) => {
     const element = ref.current;
@@ -20,10 +30,12 @@ const PublicationsPage = () => {
   };
 
   return (
-    <section className="animate-in fade-in slide-in-from-bottom-4 duration-700 max-w-7xl mx-auto px-6 py-12">
+    <>
+    <section className="animate-in fade-in duration-500 max-w-7xl mx-auto px-6 py-12">
       <header className="mb-12">
-        <div className="mb-6">
+        <div className="mb-8">
           <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">相關學術研究</h2>
+          <div className="w-20 h-2 bg-cyan-600 rounded-full" />
         </div>
         <div className="flex gap-3 flex-wrap">
           <button
@@ -54,7 +66,7 @@ const PublicationsPage = () => {
             <div className="p-2 bg-blue-100 rounded-lg text-blue-600"><BookOpen size={20} /></div>
             <h3 className="text-2xl font-bold text-slate-800">國科會計畫</h3>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2">
             {PUBLICATIONS.nstc.map((p, i) => (
               <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition-all">
                 <p className="text-[14px] text-blue-500 font-bold mb-3">{p.date}</p>
@@ -70,10 +82,10 @@ const PublicationsPage = () => {
             <div className="p-2 bg-cyan-100 rounded-lg text-cyan-600"><Briefcase size={20} /></div>
             <h3 className="text-2xl font-bold text-slate-800">產學合作計畫</h3>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2">
             {PUBLICATIONS.industry.map((p, i) => (
               <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:border-cyan-200 transition-all">
-                <p className="text-[14px] text-cyan-500 font-bold mb-3">{p.partner}</p>
+                <p className="text-cyan-500 font-bold mb-1">{p.partner}</p>
                 <h4 className="font-bold text-slate-800">{p.title}</h4>
               </div>
             ))}
@@ -99,6 +111,18 @@ const PublicationsPage = () => {
         </div>
       </div>
     </section>
+
+    {showScrollTop && (
+      <button
+        type="button"
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 z-40 group inline-flex items-center justify-center w-12 h-12 rounded-full bg-cyan-600 text-white shadow-lg hover:bg-cyan-700 transition-all hover:scale-110 active:scale-95"
+        aria-label="回到頂部"
+      >
+        <ArrowUp size={20} className="group-hover:-translate-y-1 transition-transform" />
+      </button>
+    )}
+    </>
   );
 };
 

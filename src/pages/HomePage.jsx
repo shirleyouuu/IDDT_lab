@@ -23,7 +23,7 @@ const HomePage = ({ setActiveTab }) => {
   const slideDisplay = Array.from({ length: visibleSlides }, (_, idx) => SLIDES[(currentSlide + idx) % SLIDES.length]);
 
   return (
-    <section className="animate-in fade-in slide-in-from-bottom-4 duration-700">
+    <section className="animate-in fade-in duration-500">
       {/* Hero */}
       <div className="relative py-28 px-6 overflow-hidden text-white"
         style={{
@@ -63,8 +63,9 @@ const HomePage = ({ setActiveTab }) => {
       {/* Research Summary */}
       <div id="research-section" className="bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6 py-24">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">核心研究領域</h2>
+          <div className="mb-16">
+            <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">核心研究領域</h2>
+            <div className="w-20 h-2 bg-cyan-600 rounded-full" />
           </div>
           <div className="grid md:grid-cols-3 gap-10">
             {[
@@ -85,8 +86,9 @@ const HomePage = ({ setActiveTab }) => {
       {/* 輪播 */}
       <div className="bg-slate-50 py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">研究室日常</h2>
+          <div className="mb-12">
+            <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">研究室日常</h2>
+            <div className="w-20 h-2 bg-cyan-600 rounded-full" />
           </div>
           <div className="relative w-full rounded-[40px] overflow-hidden shadow-2xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 py-4">

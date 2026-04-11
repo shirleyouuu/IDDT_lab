@@ -59,13 +59,13 @@ export const TEAM = {
     {
       name: "李孟儒",
       interest: "Scheduling",
-      year: "碩一",
+      year: "碩二",
       image: "https://imagizer.imageshack.com/img922/3558/LrX2SG.jpg",
     },
     {
       name: "李奕安",
       interest: "Supply chain",
-      year: "碩一",
+      year: "碩二",
       image: "https://imagizer.imageshack.com/img922/4539/q4Y2sE.jpg",
     },
     {
@@ -76,7 +76,7 @@ export const TEAM = {
     },
     {
       name: "蕭禮英",
-      interest: "災防",
+      interest: "Disaster Management",
       year: "碩二",
       image: "https://imagizer.imageshack.com/img924/9615/acI6Dd.jpg",
     },
