@@ -27,7 +27,7 @@ const HomePage = ({ setActiveTab }) => {
       {/* Hero */}
       <div className="relative py-28 px-6 overflow-hidden text-white"
         style={{
-          backgroundImage: 'url(/IDDT_lab/home.png)',
+          backgroundImage: 'url(/IDDT_lab/homepage.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

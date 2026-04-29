@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, GraduationCap, Briefcase, Phone, Mail, MapPin, Users, X, ArrowUp } from 'lucide-react';
+import { ChevronRight, GraduationCap, Briefcase, Trophy, Phone, Mail, MapPin, Users, X, ArrowUp, Target } from 'lucide-react';
 import { PROFESSOR, TEAM } from '../data/labData';
 
 const TeamPage = () => {
@@ -33,50 +33,35 @@ const TeamPage = () => {
 
     {/* 教授 */}
     <div className="bg-white rounded-[40px] shadow-2xl shadow-slate-200/50 overflow-hidden border border-slate-100 mb-24">
-      <div className="flex flex-col lg:flex-row lg:gap-8">
-        <div className="lg:w-1/3 p-8 md:p-14 flex items-start">
-          <img src={PROFESSOR.image} alt={PROFESSOR.name} className="w-full h-full object-cover min-h-[250px] rounded-2xl" />
+      {/* 教授名稱與聯絡資訊 */}
+      <div className="px-8 md:px-14 pt-8 md:pt-14">
+        <div className="flex justify-between items-start">
+          <div>
+            <h3 className="text-4xl font-bold text-slate-900 mb-2">{PROFESSOR.name}</h3>
+            <p className="text-cyan-600 font-bold text-xl">{PROFESSOR.title}</p>
+          </div>
+          <div className="hidden md:flex flex-col text-right text-sm text-slate-500 space-y-2">
+            <div className="flex items-center justify-end space-x-2"><Phone size={14} /><span>{PROFESSOR.contact.phone}</span></div>
+            <div className="flex items-center justify-end space-x-2 text-cyan-600 font-medium"><Mail size={14} /><span>{PROFESSOR.contact.email}</span></div>
+            <div className="flex items-center justify-end space-x-2"><MapPin size={14} /><span>{PROFESSOR.contact.office}</span></div>
+          </div>
         </div>
-        <div className="lg:w-2/3 p-8 md:p-14">
-          <div className="flex justify-between items-start mb-8">
-            <div>
-              <h3 className="text-4xl font-bold text-slate-900 mb-2">{PROFESSOR.name}</h3>
-              <p className="text-cyan-600 font-bold text-xl">{PROFESSOR.title}</p>
-            </div>
-            <div className="hidden md:flex flex-col text-right text-sm text-slate-500 space-y-2">
-              <div className="flex items-center justify-end space-x-2"><Phone size={14} /><span>{PROFESSOR.contact.phone}</span></div>
-              <div className="flex items-center justify-end space-x-2 text-cyan-600 font-medium"><Mail size={14} /><span>{PROFESSOR.contact.email}</span></div>
-              <div className="flex items-center justify-end space-x-2"><MapPin size={14} /><span>{PROFESSOR.contact.office}</span></div>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-10">
-            <div>
-              <h4 className="flex items-center text-slate-800 font-bold mb-4 border-b pb-2">
-                <GraduationCap className="mr-2 text-cyan-500" size={18} /> 學歷背景
-              </h4>
-              <ul className="space-y-3">
-                {PROFESSOR.education.map((edu, i) => (
-                  <li key={i} className="text-slate-600 flex items-start text-sm leading-relaxed">
-                    <ChevronRight size={14} className="mt-1 mr-2 text-cyan-400" /> {edu}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="flex items-center text-slate-800 font-bold mb-4 border-b pb-2">
-                <Briefcase className="mr-2 text-cyan-500" size={18} /> 工作經歷
-              </h4>
-              <ul className="space-y-3">
-                {PROFESSOR.experience.map((exp, i) => (
-                  <li key={i} className="text-slate-600 flex items-start text-sm leading-relaxed">
-                    <ChevronRight size={14} className="mt-1 mr-2 text-cyan-400" /> {exp}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="mt-10">
-            <h4 className="text-slate-800 font-bold mb-4">研究領域 Focus</h4>
+      </div>
+
+      {/* 照片 + 研究領域 + 學歷背景 */}
+      <div className="px-8 md:px-14 py-8 md:py-14 flex flex-col lg:flex-row lg:gap-8">
+        {/* 照片 */}
+        <div className="lg:w-1/3 flex-shrink-0">
+          <img src={PROFESSOR.image} alt={PROFESSOR.name} className="w-full aspect-[3/4] object-cover object-top rounded-2xl" />
+        </div>
+
+        {/* 研究領域 + 學歷背景 */}
+        <div className="lg:w-2/3 space-y-8">
+          {/* 研究領域 */}
+          <div>
+            <h4 className="flex items-center text-slate-800 font-bold mb-4">
+              <Target className="mr-2 text-cyan-500" size={18} /> 研究領域 Focus
+            </h4>
             <div className="flex flex-wrap gap-2">
               {PROFESSOR.researchInterests.map((interest, i) => (
                 <span key={i} className="bg-slate-100 text-slate-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-cyan-50 hover:text-cyan-600 transition-colors cursor-default">
@@ -85,10 +70,49 @@ const TeamPage = () => {
               ))}
             </div>
           </div>
+
+          {/* 學歷背景 */}
+          <div>
+            <h4 className="flex items-center text-slate-800 font-bold mb-4 border-b pb-2">
+              <GraduationCap className="mr-2 text-cyan-500" size={18} /> 學歷背景
+            </h4>
+            <ul className="space-y-3">
+              {PROFESSOR.education.map((edu, i) => (
+                <li key={i} className="text-slate-600 flex items-start text-sm leading-relaxed">
+                  <ChevronRight size={14} className="mt-1 mr-2 text-cyan-400" /> {edu}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
-      <div className="px-8 md:px-14 pb-8 md:pb-14 text-slate-600 text-sm leading-relaxed">
-        <p>{PROFESSOR.biography}</p>
+
+      {/* 工作經歷 */}
+      <div className="px-8 md:px-14 pb-8 md:pb-14 border-t border-slate-200 pt-8 md:pt-14">
+        <h4 className="flex items-center text-slate-800 font-bold mb-4">
+          <Briefcase className="mr-2 text-cyan-500" size={18} /> 工作經歷
+        </h4>
+        <ul className="space-y-3">
+          {PROFESSOR.experience.map((exp, i) => (
+            <li key={i} className="text-slate-600 flex items-start text-sm leading-relaxed">
+              <ChevronRight size={14} className="mt-1 mr-2 text-cyan-400" /> {exp}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* 榮譽與獎項 */}
+      <div className="px-8 md:px-14 pb-8 md:pb-14 border-t border-slate-200 pt-8 md:pt-14">
+        <h4 className="flex items-center text-slate-800 font-bold mb-4">
+          <Trophy className="mr-2 text-cyan-500" size={18} /> 榮譽與獎項
+        </h4>
+        <ul className="space-y-3">
+          {PROFESSOR.honors.map((honor, i) => (
+            <li key={i} className="text-slate-600 flex items-start text-sm leading-relaxed">
+              <ChevronRight size={14} className="mt-1 mr-2 text-cyan-400" /> {honor}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
 
